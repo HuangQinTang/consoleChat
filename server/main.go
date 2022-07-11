@@ -13,12 +13,12 @@ import (
 func main() {
 	fmt.Println("服务启动...")
 	listen, err := net.Listen("tcp", config.GetConfig().Server.ListenPort)
-	fmt.Println("监听6666端口...")
-	defer listen.Close()
 	if err != nil {
 		fmt.Println("net.Listen err = ", err.Error())
 		return
 	}
+	defer listen.Close()
+	fmt.Println("监听6666端口...")
 
 	//监听成功，等待客户端链接
 	for {

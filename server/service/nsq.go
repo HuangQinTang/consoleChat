@@ -1,15 +1,15 @@
 package service
 
 import (
-	"encoding/json"
-	"errors"
-	"github.com/nsqio/go-nsq"
 	"chat/dao"
 	"chat/defined"
 	"chat/library/config"
 	mynsq "chat/library/nsq"
 	"chat/library/usermgr"
 	"chat/utils"
+	"encoding/json"
+	"errors"
+	"github.com/nsqio/go-nsq"
 	"os"
 	"os/signal"
 	"syscall"
